@@ -105,17 +105,3 @@ def train_step(image, epoch, style_target, content_target, optimizer, model, sta
     
     if epoch % 100 == 0:
         tf.print(f'Epoch {epoch} : Loss = {loss}')
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
