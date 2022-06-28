@@ -74,13 +74,13 @@ def loss_object(style_outputs, content_outputs, style_target, content_target):
     """
     
     style_weight = 1e-2 # alpha from the loss total equation
-    content_weight = 1e4 # beta from the loss total equation
+    content_weight = 1e-1 # beta from the loss total equation
     content_loss = tf.reduce_mean((content_outputs - content_target) ** 2)
     style_loss = tf.add_n([tf.reduce_mean((output - target) ** 2) for output, target in zip(style_outputs, style_target)])
     total_loss = content_weight * content_loss + style_weight * style_loss
     return total_loss
     
-def train_step(image, epoch, style_target, content_target, optimizer, model):
+def train_step(image, epoch, style_target, content_target, optimizer, model, start):
     """
     
     Train the style transfer model
@@ -104,7 +104,7 @@ def train_step(image, epoch, style_target, content_target, optimizer, model):
     image.assign(tf.clip_by_value(image, clip_value_min=0.0, clip_value_max=1.0)) # to clip image pixel between 0 to 1
     
     if epoch % 100 == 0:
-        tf.print(f'Loss = {loss}')
+        tf.print(f'Epoch {epoch} : Loss = {loss}')
     
     
     
