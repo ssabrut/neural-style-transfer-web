@@ -1,20 +1,54 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    <title>Django Tailwind</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_preload_css %}
-		{% tailwind_css %}
-	</head>
+  <head>
+    <title>Create your own art with Neural Style Transfer | Created by Michael Eco</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% tailwind_preload_css %} {% tailwind_css %}
+  </head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
-		<div class="container mx-auto">
-			<section class="flex items-center justify-center h-screen">
-				<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-			</section>
-		</div>
-	</body>
+  <body class="font-serif leading-normal tracking-normal">
+    <div class="container mx-auto">
+      <section class="flex flex-col items-center justify-center h-screen">
+        <div class="mb-12">
+          <form action="" enctype="multipart/form-data">
+            <div class="mb-12 w-full">
+              <h3 class="font-bold text-3xl w-96 text-center mx-auto">Create your own art with Neural Style Transfer</h3>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="mr-12">
+                <div class="mb-8">
+                  <img class="w-72 h-72 bg-gray-200 rounded" alt="" />
+                </div>
+                <div>
+                  <label class="bg-sky-800 py-4 px-4 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center" for="content-image">Upload Content Image</label>
+                  <input class="hidden" type="file" name="content-image" id="content-image" />
+                </div>
+              </div>
+              <div>
+                <div class="mb-8">
+                  <img class="w-72 h-72 bg-gray-200 rounded" alt="" />
+                </div>
+                <div>
+                  <label class="bg-sky-800 py-4 px-4 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center" for="style-image">Upload Style Image</label>
+                  <input class="hidden" type="file" name="style-image" id="style-image" />
+                </div>
+              </div>
+              <!-- <div class="ml-12">
+                <div class="mb-8">
+                  <img class="w-72 h-72 bg-gray-200 rounded" alt="" />
+                </div>
+                <div>
+                  <label class="bg-sky-800 py-4 px-4 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center" for="styled-image">Style Image</label>
+                  <input class="hidden" type="file" name="styled-image" id="style-image" />
+                </div>
+              </div> -->
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
