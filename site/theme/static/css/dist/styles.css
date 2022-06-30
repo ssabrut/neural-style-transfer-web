@@ -796,12 +796,12 @@ label:hover {
   margin-bottom: 3rem;
 }
 
-.mr-12 {
-  margin-right: 3rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
 }
 
 .ml-12 {
@@ -858,6 +858,10 @@ label:hover {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .rounded {

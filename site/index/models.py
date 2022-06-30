@@ -1,5 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Art(models.Model):
-  content_image = models.ImageField(upload_to='images/')
+class Content(models.Model):
+  content_img = models.ImageField(upload_to='images/')
+
+class Style(models.Model):
+  style_img = models.ImageField(upload_to='images/')
