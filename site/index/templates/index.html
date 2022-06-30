@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% tailwind_preload_css %} {% tailwind_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'index/app.css' %}" />
   </head>
 
   <body class="font-serif leading-normal tracking-normal">
@@ -21,10 +21,14 @@
           <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
 
-            <!-- content form -->
-            <div>{{ form }}</div>
-
             <div class="flex justify-between items-center">
+              <!-- content form -->
+              <div class="mr-12">
+                <div class="mb-8">
+                  <img class="w-72 h-72 bg-gray-200 rounded" id="content-preview" alt="Content image will be displayed here" />
+                </div>
+                <div>{{ content_form }}</div>
+              </div>
               <!-- <div class="mr-12">
                 <div class="mb-8">
                   <img class="w-72 h-72 bg-gray-200 rounded" alt="" />
@@ -55,12 +59,13 @@
               <button type="submit">Upload</button>
             </div>
           </form>
-          {% if img %}
-          <h3>Succesfully uploaded : {{img.title}}</h3>
-          <img src="{{ img.image.url}}" alt="connect" style="max-height: 300px" />
+          {% if content_img %}
+          <h3>Succesfully uploaded : {{content_img.title}}</h3>
+          <img src="{{ content_img.image.url}}" alt="connect" style="max-height: 300px" />
           {% endif %}
         </div>
       </section>
     </div>
+    <script src="{% static 'index/app.js' %}"></script>
   </body>
 </html>

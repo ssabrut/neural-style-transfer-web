@@ -4,6 +4,6 @@
 
 @layer components {
   label {
-    @apply bg-sky-800 py-4 px-4 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center;
+    @apply bg-sky-800 py-4 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center;
   }
 }
