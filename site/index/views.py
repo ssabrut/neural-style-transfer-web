@@ -12,6 +12,7 @@ def index(request):
       style_form.save()
       content_img = content_form.instance
       style_img = style_form.instance
+      return redirect('canvas/')
       return render(request, 'index.html', {
         'content_form': content_form,
         'style_form': style_form,

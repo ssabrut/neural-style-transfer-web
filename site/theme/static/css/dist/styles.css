@@ -767,8 +767,8 @@ label {
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: center;
   font-weight: 600;
   --tw-text-opacity: 1;
@@ -787,6 +787,18 @@ label:hover {
   position: static;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.right-12 {
+  right: 3rem;
+}
+
+.bottom-12 {
+  bottom: 3rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -796,16 +808,12 @@ label:hover {
   margin-bottom: 3rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mr-12 {
   margin-right: 3rem;
 }
 
-.ml-12 {
-  margin-left: 3rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -814,10 +822,6 @@ label:hover {
 
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-screen {
@@ -860,10 +864,6 @@ label:hover {
   justify-content: space-between;
 }
 
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -888,9 +888,14 @@ label:hover {
   padding-bottom: 1rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .text-center {

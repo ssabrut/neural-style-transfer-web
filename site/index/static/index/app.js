@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  document.getElementsByTagName('label')[0].innerHTML = 'Upload Content Image';
-  document.getElementsByTagName('label')[1].innerHTML = 'Upload Style Image';
+  document.getElementsByTagName('label')[0].innerHTML = 'Select Content Image';
+  document.getElementsByTagName('label')[1].innerHTML = 'Select Style Image';
   const contentImage = document.getElementById('content_image');
   const styleImage = document.getElementById('style_image');
 
@@ -22,7 +22,7 @@
         contentPreview.src = ofReader.result;
       }
     }
-  }
+  } 
 
   function previewStyle(e) {
     if (window.FileReader) {
