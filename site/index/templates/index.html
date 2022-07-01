@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% tailwind_preload_css %} {% tailwind_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'index/app.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'index/css/index.css' %}" />
   </head>
 
   <body class="font-serif leading-normal tracking-normal">
@@ -38,17 +38,16 @@
             </div>
             <button class="absolute right-12 bottom-12 bg-sky-800 py-6 px-16 rounded font-semibold text-white cursor-pointer hover:bg-sky-700 transition-all block text-center" type="submit">Start Painting</button>
           </form>
-          <!-- {% if content_img %}
-          <h3>Succesfully uploaded</h3>
-          <img src="{{ content_img.content_img.url}}" alt="connect" style="max-height: 300px" />
-          {% endif %}
-          {% if content_img %}
-          <h3>Succesfully uploaded</h3>
-          <img src="{{ style_img.style_img.url}}" alt="connect" style="max-height: 300px" />
+          <!-- {% if images %}
+            {% for image in images %}
+              <div class="flex justify-center items-center">
+                <img class="w-72 h-72 bg-gray-200 rounded" src="{{ image.url }}" />
+              </div>
+            {% endfor %}
           {% endif %} -->
         </div>
       </section>
     </div>
-    <script src="{% static 'index/app.js' %}"></script>
+    <script defer src="{% static 'index/js/index.js' %}"></script>
   </body>
 </html>

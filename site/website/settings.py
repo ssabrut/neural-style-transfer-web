@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     # self
     'index',
-    'canvas',
 
     # styles
     'tailwind',

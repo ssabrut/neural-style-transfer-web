@@ -10,14 +10,11 @@ def index(request):
     if content_form.is_valid() and style_form.is_valid():
       content_form.save()
       style_form.save()
-      content_img = content_form.instance
-      style_img = style_form.instance
-      return redirect('/canvas/' + str(content_img.id) + '/' + str(style_img.id))
-      return render(request, 'index.html', {
+      images = [content_form.instance.content_img, style_form.instance.style_img]
+      return redirect('canvas/', {
         'content_form': content_form,
         'style_form': style_form,
-        'content_img': content_img,
-        'style_img': style_img,
+        'images': images,
       })
   else:
     content_form = ContentForm()
@@ -26,3 +23,6 @@ def index(request):
     'content_form': content_form,
     'style_form': style_form,
   })
+
+def canvas(request):
+  return render(request, 'canvas.html')
